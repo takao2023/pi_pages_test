@@ -25,7 +25,6 @@ function getTimeParts(timeZone){
   return { hh, mm, ss };
 }
 
-
 function drawClock(ctx, w, h, hh, mm, ss){
   const r = Math.min(w,h)/2;
   ctx.clearRect(0,0,w,h);
