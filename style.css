@@ -1,0 +1,86 @@
+:root{
+  --clock-size: 84px;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #e9f6f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
+.map-wrap{
+  position: relative;
+  max-width: 1200px;
+  width: 95vw;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.map-wrap img{
+  display:block;
+  width:100%;
+  height:auto;
+  user-select: none;
+}
+
+.pin{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.label{
+  display: inline-flex;
+  align-items:center;
+  gap:8px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+  font-weight: 700;
+  color: #134149;
+  pointer-events: auto;
+}
+
+.label .flag{
+  font-size: 18px;
+}
+
+.clock-wrap{
+  margin-top: 8px;
+  width: var(--clock-size);
+  height: var(--clock-size);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+canvas.analog-clock{
+  width: calc(var(--clock-size) - 12px);
+  height: calc(var(--clock-size) - 12px);
+  display:block;
+}
+
+/* --- 位置（調整可能） --- */
+#pin-newyork{ left: 19%; top: 55%; }
+#pin-london{ left: 49%; top: 51%; }
+#pin-paris{ left: 50%; top: 72%; }
+#pin-tokyo{ left: 80%; top: 60%; }
+#pin-cairo{ left: 25%; top: 92%; }
+#pin-sydney{ left: 85%; top: 90%; }
+
+@media (max-width:700px){
+  :root{ --clock-size: 70px; }
+  .label{ font-size: 13px; padding:6px 10px; }
+}

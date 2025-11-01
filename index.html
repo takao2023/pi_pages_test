@@ -1,1 +1,42 @@
-<p>Hello World</p>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>World Clocks on Map</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="map-wrap" id="mapWrap">
+  <img src="./img/地図.png" alt="World map" />
+
+  <div class="pin" id="pin-newyork">
+    <div class="clock-wrap"><canvas class="analog-clock" id="clock-New_York"></canvas></div>
+  </div>
+
+  <div class="pin" id="pin-london">
+    <div class="clock-wrap"><canvas class="analog-clock" id="clock-London"></canvas></div>
+  </div>
+
+  <div class="pin" id="pin-paris">
+    <div class="clock-wrap"><canvas class="analog-clock" id="clock-Paris"></canvas></div>
+  </div>
+
+  <div class="pin" id="pin-tokyo">
+    <div class="clock-wrap"><canvas class="analog-clock" id="clock-Tokyo"></canvas></div>
+  </div>
+
+  <div class="pin" id="pin-cairo">
+    <div class="clock-wrap"><canvas class="analog-clock" id="clock-Cairo"></canvas></div>
+  </div>
+
+  <div class="pin" id="pin-sydney">
+    <div class="clock-wrap"><canvas class="analog-clock" id="clock-Sydney"></canvas></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
